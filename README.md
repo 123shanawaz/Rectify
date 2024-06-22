@@ -1,0 +1,115 @@
+## Rectify - Automated Exam Proctoring tool for Online Exams using Face Recognition | MesoHacks Submission | Education Track
+
+### 🚩 Overview 
+During COVID 19 pandemic, online education has become a common norm in schools and colleges, and students themselves are adapted to this online environment of education, as classes are being held in online mode, exams are also conducted online and students tend to cheat in those exams due to lack of security and no physical guarding by professors/teachers which is monitored live, so here is my solution to the problem! Now teachers can monitor students' live even in online mode!
+
+## 🔗 Links for project:  
+ 
+Live demo : [Live Site](http://engage-rectify.herokuapp.com/)
+
+Video demo : [Watch Demo Video](https://drive.google.com/file/d/10aA4wQT6zFPi9E4kH7bjx06CRvHkO-xy/view?usp=sharing) 
+
+## 🚩 General Features and Interfaces:
+Feature | Images
+------------ | -------------
+ **Hompage**  
+ It is fast, easy to use, and incredibly convenient with a minimalistic UI! To create an exam, just register as an instructor and login to create the exam! | ![homepage](https://user-images.githubusercontent.com/72180855/169327827-c1900a42-36b9-40b0-aff9-c70fec5f9a12.jpg)
+**Registration Page** 
+You can register as an instructor or register as a student!|![registrationPage](https://user-images.githubusercontent.com/72180855/169329936-754069ba-d581-43a1-8cf2-2eac8b9d1e11.jpg)
+**Register as professor!** |![professor](https://user-images.githubusercontent.com/72180855/169717950-bd48965b-bfbf-4054-a7c2-ad6176e949e8.jpg)
+**Register as student** | ![student](https://user-images.githubusercontent.com/72180855/169718036-0480ad8c-332d-4982-96ce-e6d403f44022.jpg)
+**Login Page** 
+User can login as a student or as a professor, authentication system is implemented by using Passport.js | ![LoginPage](https://user-images.githubusercontent.com/72180855/169330053-aaa107cf-23b9-4d45-ade9-ab9929d1128b.jpg)
+**Live Teacher Dashboard**  
+Professor can watch live status of the students of the ongoing exam by entering the unique code which was generated when the professor created the exam and can monitor student from his own dashboard| ![logcheck](https://user-images.githubusercontent.com/72180855/169719205-8ae815d0-79b4-4065-b95c-3769de13d640.jpg)
+**Exam Creation**
+Professors can create exam by filling out the form, time and date, exam duration! You can use google forms, microsoft forms,any other form link for exam | ![examCreation](https://user-images.githubusercontent.com/72180855/169330873-a0399556-54a7-46cb-8f18-1bf3b3e652a7.jpg)
+**ExamPage**
+This is how the exam page looks, allow access to webcam, it starts and recognises the face to start working | ![exampage](https://user-images.githubusercontent.com/72180855/169332552-58b90afd-6613-4bda-991d-aadce99c6293.jpg) 
+
+
+## 🚩 Features of Live Face Recognition Model:
+Feature | Images
+------------ | -------------
+**Face Visibility** If you try to hide your face from webcam or moveout of the frame it gives a warning after few seconds,that your face is not visible! | ![facenot](https://user-images.githubusercontent.com/72180855/169716958-4f6a6cdc-9b60-48a4-9acc-a2833a084cbe.jpg)
+**Multiple Face Recognition** If more than one face is detected during the exam, the model detects it and action is reported to the professor. |![multiple face detection](https://user-images.githubusercontent.com/72180855/169717137-38d3ee73-56f0-46cb-87d3-a15e201932ab.jpg)
+**Cell Phone Detection** If any student tries to cheat via phone the model detects it and immediately reports it to the professor then and there | ![cell phone detection](https://user-images.githubusercontent.com/72180855/169334442-3d799e4e-4536-447f-b9c3-4484af2fe74a.jpg) 
+**Disabled Copy/Paste** If any student tries to copy any questions to search on the web it immediately detects and report it to the professor as control keys are disable | ![ctrlkey](https://user-images.githubusercontent.com/72180855/169334801-55e0f168-f7c6-4742-a3e2-812376a6a871.jpg)
+**Disabled Tab Change** Tab changing is strictly monitored during the live examination, if any student tries to open any other tab, the model detects and reports it immediately to the professor that student is changing the tab as well as the number of times he changed | ![tabchange](https://user-images.githubusercontent.com/72180855/169334996-10b8debe-92a9-4472-adbc-fc20ff78cf81.jpg)
+**Prohibited Object Detection!** Some prohibited objects such as books,any other laptop is also detected if any student tries to choose this way of malpractice | ![booldetect](https://user-images.githubusercontent.com/72180855/169391280-b536cf0a-37cc-4203-8ffc-d477f9a373e1.jpg)
+
+**Other Features :**
+1. Dynamic Teacher's Dashboard 
+2. Sorting and searching functionalites in Professor's Dashboard
+3. Return Back to exam within set time (done because if any student losses connection during the exam) he can return back to it.
+4. Exam creation dialog box which automatically copies generated exam code to clipboard
+
+**Note:** - Since in the current iteration of the project I am using google form link from professor instead of making questions in the application itself, it is impossible to put key listeners and right click prevention in it since its a third party app and React prevents it due to security reasons. To test these features, please do ctrl press, alt press and right click on left side of screen only.
+
+
+## 🌐 Web flow
+![Flowchart](https://user-images.githubusercontent.com/72180855/169703099-fdc87bec-c42d-407c-b6a4-23acc41f4e6b.jpg)
+
+
+##  🚩 Technologies used:
+![Purple Modern Aries Sun Sign Horoscope YouTube Thumbnail](https://user-images.githubusercontent.com/72180855/170594821-a0ac2c95-b8db-4ac9-b20b-9d6b5425500c.png)
+
+#### Programming Languages : <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/> <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/>
+#### Face Recognition Model :  <img alt = "TensorflowJS" src = "https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>  Database : <img alt = "MongoDB" src = "https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
+#### Version Control : <img alt="Git" src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"/>  Hosting :<img alt="Heroku" src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white"/>
+####  Frameworks/Libraries : <img alt = "ReactJS" src = "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img alt = "Redux" src = "https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white"/> <img alt="NodeJS" src="https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node-dot-js&logoColor=white"/> <img alt = "ExpressJS" src = "https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"/> <img alt = "JWT" src = "https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white"/> <img alt = "MaterialUI" src = "https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white"/>
+###### You can also see the list of dependencies in the package.json file.
+
+## 🚩Installation/Environment Setup 
+
+  #### Login Credentials 
+       professor email - prof1@gmail.com password - 123456
+       student email - student2@gmail.com password - 123456
+       
+  #### 1. Clone App
+  
+  * Write the following command and press enter.
+  
+  ```
+    $ git clone https://github.com/aryans1319/Rectify.git
+  ```
+    
+ #### 2. Install node packages
+  * Move to the parent/root directory (Rectify) cd Rectify
+  * Write the following command and press enter to download all required node modules.
+ 
+   ```
+   $ cd Rectify
+   $ npm install 
+  ```
+  
+#### 3. Move to Client directory and install Node packages
+ * Move to the client folder inside the Rectify folder by cd client
+ * Write the following command and press enter to download all required node modules. 
+ 
+ ```
+   $ cd client
+   $ npm start
+ ```
+
+ #### 4. Run Locally
+  * Move back to the parent directory by cd..
+  * While you are still inside the cloned folder, write the following command to run the website locally.
+ 
+ ```
+   $ npm run dev
+ ```
+ 
+ 
+ ###### NOTE: This concurrently runs server and frontend, give a few seconds for frontend to load and the port by default will be ```http://localhost:3000/```
+ 
+ 
+## 🚩 Future Scopes:-
+
+Feature | Explanation
+------------ | -------------
+Creating Exam Feature in the application itself| Instead of using a external link(google/microsoft forms),exam creation in the web-application itself would provide more security and better user experience to the product.
+Class Management | All class management activities (branch/section wise) separately for every year students, creating assignment in the application itself assigning tasks and keep a record of every student activites individually in different sections.
+Video Calling support | Video calling support between students and teacher for quick doubt resolve and better teacher to student interaction
+
+
